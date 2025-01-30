@@ -19,11 +19,9 @@ Este projeto consiste em uma API desenvolvida com **Java**, utilizando o framewo
 
 Foi realizado os testes unitários no formato Given-When-Then (GWT), utilizando as bibliotecas **JUnit, Mockito e AssertJ.**
 
-Este projeto foi desenvolvido como avaliação final da trilha de Java do projeto Itaú/IBM.
-
 ## Índice
 
-- [Instalação](#instalação)
+- [Instalação](ull#instalação)
 - [Configurações](#configurações)
 - [Usando](#usando)
 - [API Endpoints](#api-endpoints)
@@ -31,9 +29,50 @@ Este projeto foi desenvolvido como avaliação final da trilha de Java do projet
 
 ## Instalação
 
-## Configurações
+### Requisitos:
+
+- Docker e Docker Compose
+- Java 17+
+- Maven
+
+### Passos:
+
+Clone este repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-projeto.git
+```
+```bash
+cd seu-projeto
+```
+Construa a aplicação (caso queira rodar localmente sem Docker):
+
+```bash
+mvn clean install
+```
+Execute a aplicação com Docker:
+
+```bash
+docker-compose up -d
+```
+
+A aplicação estará disponível em: http://localhost:8080/users
 
 ## Usando
+
+### Executando com Docker
+
+Inicie os containers:
+
+```bash
+docker-compose up -d
+```
+
+Verifique os logs para garantir que tudo está funcionando:
+
+```bash
+docker-compose logs -f
+```
 
 ## Arquitetura
 
