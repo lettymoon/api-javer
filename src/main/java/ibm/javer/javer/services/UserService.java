@@ -48,7 +48,7 @@ public class UserService {
                 .map(UserResponseDTO::new)
                 .toList();
         if (usuariosList.isEmpty()){
-            return new ResponseDTO<>("Nenhum usuário encontrado", usuariosList, HttpStatus.OK);
+            throw  new UserNotExistException();
         }
         return new ResponseDTO<>("Usuários encontrados com sucesso", usuariosList, HttpStatus.OK);
     }

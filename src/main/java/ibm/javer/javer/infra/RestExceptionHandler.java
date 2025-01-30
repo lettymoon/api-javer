@@ -1,6 +1,8 @@
-package ibm.javer.javer.exceptions;
+package ibm.javer.javer.infra;
 
 import ibm.javer.javer.dtos.ResponseDTO;
+import ibm.javer.javer.exceptions.UserExistException;
+import ibm.javer.javer.exceptions.UserNotExistException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

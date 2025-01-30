@@ -1,4 +1,4 @@
-package ibm.javer.javer.exceptions;
+package ibm.javer.javer.infra;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
