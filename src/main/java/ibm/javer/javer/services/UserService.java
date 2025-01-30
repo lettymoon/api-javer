@@ -2,13 +2,12 @@ package ibm.javer.javer.services;
 
 import ibm.javer.javer.domain.user.User;
 import ibm.javer.javer.exceptions.UserExistException;
-import ibm.javer.javer.exceptions.UserNotExistException;
 import ibm.javer.javer.repositories.UserRepository;
+import ibm.javer.javer.exceptions.UserNotExistException;
 import ibm.javer.javer.dtos.ResponseDTO;
 import ibm.javer.javer.dtos.UserAllDataResponseDTO;
 import ibm.javer.javer.dtos.UserRequestDTO;
 import ibm.javer.javer.dtos.UserResponseDTO;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -87,7 +86,7 @@ public class UserService {
         Optional<User> user = userRepository.findByCpf(cpf);
 
         if (!user.isPresent()) {
-            throw  new UserNotExistException();
+            throw new UserNotExistException();
         }
 
         user.get().setScore_credito(user.get().getSaldo_cc() * 0.1);

@@ -2,7 +2,6 @@ package ibm.javer.javer.repositories;
 
 import ibm.javer.javer.domain.user.User;
 import ibm.javer.javer.dtos.UserRequestDTO;
-import ibm.javer.javer.dtos.UserResponseDTO;
 import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,8 +11,6 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @ActiveProfiles("test")
